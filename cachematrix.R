@@ -9,7 +9,7 @@
 ## > A$getinverse() # inverse hasn't been computed yet, so this should be NULL
 ## NULL
 ## > ainv<-cacheSolve(A) #inverse has not been computed yet, so compute it now using solve
-## > I<-a*ainv #if matrix is scaled properly (not singular), this should return the 4x4 identity matrix
+## > I<-a%*%ainv #if matrix is scaled properly (not singular), this should return the 4x4 identity matrix
 ## > View(I) # quick check to see how close to the identity I is
 ## > ainv_cache<-cacheSolve(A) #check to make sure that cacheSolve function returns cached value (avoid computing again)
 ## getting cached data #cached value is used to set ainv_cache
